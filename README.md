@@ -1,6 +1,15 @@
-# 🐣 Pet Revival Season
+<div align="center">
 
-> 一个试图把时代眼泪重新养活的桌面宠物项目。
+<img src="./banner.svg" alt="Pet Revival Season" width="100%" />
+
+<br/>
+
+[![Made with Tauri](https://img.shields.io/badge/Tauri-2.x-3d2f6e?style=flat-square&logo=tauri&logoColor=white)](https://tauri.app)
+[![Rust](https://img.shields.io/badge/Rust-state_machine-5a4496?style=flat-square&logo=rust&logoColor=white)](https://www.rust-lang.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-7c63b8?style=flat-square)](./LICENSE)
+[![Status: MVP in progress](https://img.shields.io/badge/Status-MVP_in_progress-9b8fc2?style=flat-square)]()
+
+</div>
 
 ---
 
@@ -31,28 +40,45 @@
 你长时间没碰电脑 ——  它叹口气，自己趴下
 ```
 
-这些小动作，比任何数值面板都更能让你觉得：**它是活的。**
+> 这些小动作，比任何数值面板都更能让你觉得：**它是活的。**
 
 ---
 
 ## 技术选型
 
-| 层 | 选型 |
-|---|---|
-| 框架 | **Tauri 2.x**（轻量，适合常驻后台） |
-| 状态机 | **Rust 行为树 / 事件调度器**（MVP 阶段先简单，后面再精） |
-| 渲染 | **Canvas / 前端动画层** |
-| 核心设计 | 意图层与动画层解耦，后端产行为指令，前端选帧序列播放 |
-
-详见 [`docs/architecture.md`](docs/architecture.md)
+| 层 | 选型 | 说明 |
+|---|---|---|
+| 框架 | **Tauri 2.x** | 轻量，适合常驻后台，资源占用 < 50MB |
+| 状态机 | **Rust 行为树** | MVP 阶段用事件调度器，二期再精 |
+| 渲染 | **Canvas / HTML** | 前端动画层，帧序列播放 |
+| 核心设计 | **意图层与动画层解耦** | 后端产行为指令，前端选帧序列播放 |
 
 ---
 
-## MVP 范围
+## 快速开始
 
-> 第一版只做一件事：让桌面上真的有个小东西活着。
+```bash
+# 克隆项目
+git clone https://github.com/yourname/pet-revival-season.git
+cd pet-revival-season
 
-详见 [`docs/mvp.md`](docs/mvp.md)
+# 安装依赖
+npm install
+
+# 开发模式启动
+npm run tauri dev
+```
+
+> **环境要求：** Node.js 18+、Rust 1.70+、[Tauri 前置依赖](https://tauri.app/start/prerequisites/)
+
+---
+
+## 文档
+
+| 文档 | 内容 |
+|---|---|
+| [`docs/architecture.md`](docs/architecture.md) | 技术架构、目录结构、意图层设计 |
+| [`docs/mvp.md`](docs/mvp.md) | MVP 范围、行为优先级、完成标准 |
 
 ---
 
@@ -63,3 +89,9 @@
 但**复活赛**这个词的意思是：被淘汰的人还有机会回来。
 
 这个项目就是一场复活赛。我们不一定能赢，但至少可以试试。
+
+---
+
+<div align="center">
+<sub>made with 🫶 and a lot of nostalgia</sub>
+</div>
